@@ -73,6 +73,11 @@ public class InvestmentChoiceForm extends org.apache.struts.action.ActionForm {
 
     @Override
     public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
+        try {
+            request.setCharacterEncoding("UTF8");
+        } catch (UnsupportedEncodingException ex) {
+            ex.printStackTrace();
+        }
         ActionErrors errors = new ActionErrors();
 
         if (getClientNameAndSurname() == null || getPrice().length() < 1) {

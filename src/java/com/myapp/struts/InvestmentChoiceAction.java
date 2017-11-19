@@ -27,6 +27,9 @@ public class InvestmentChoiceAction extends org.apache.struts.action.Action {
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
 
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+        
         InvestmentChoiceForm formBean = (InvestmentChoiceForm) form;
         
         String clientPersonalData = formBean.getClientNameAndSurname();
