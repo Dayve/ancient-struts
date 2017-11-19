@@ -16,7 +16,7 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <html:form action="/login">
+        <html:form action="/investment">
             <table border="0">
                 <tbody>
                     <tr>

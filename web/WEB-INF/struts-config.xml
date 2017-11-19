@@ -14,7 +14,7 @@
     </global-exceptions>
 
     <action-mappings>
-        <action name="InvestmentChoiceForm" path="/login" scope="request" type="com.myapp.struts.InvestmentChoiceAction" validate="false">
+        <action name="InvestmentChoiceForm" path="/investment" scope="request" type="com.myapp.struts.InvestmentChoiceAction" validate="false">
             <forward name="success" path="/success.jsp" />
             <forward name="failure" path="/investmentForm.jsp" />
         </action>
