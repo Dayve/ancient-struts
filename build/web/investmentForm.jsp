@@ -46,7 +46,6 @@
 
         <html:submit value="Prześlij" styleClass="right-side" styleId="send-button" />
     </html:form>
-    <div id="suggestionsList"></div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script type='text/javascript'>
         function init() {
@@ -81,7 +80,6 @@
             };
             
             $.ajax(queryParams).done(function (received) {
-                console.log(received);
                 var suggestions = received.trim().split(',');
 
                 var timeSuggestionsElement = document.getElementById('period-suggestions');

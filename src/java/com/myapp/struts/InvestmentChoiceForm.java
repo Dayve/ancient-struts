@@ -59,8 +59,8 @@ public class InvestmentChoiceForm extends org.apache.struts.action.ActionForm {
 
     private String error;
 
-    public void setError() {
-        this.error = "<span style='color:red'>Dane niepoprawne</span>";
+    public void setError(String errorMessage) {
+        this.error = "<p style='color:red'>" + errorMessage + "</p>";
     }
 
     public String getError() {

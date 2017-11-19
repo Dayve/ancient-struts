@@ -5,6 +5,8 @@
  */
 package com.myapp.struts;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.apache.struts.action.ActionForm;
@@ -17,37 +19,43 @@ import org.apache.struts.action.ActionMapping;
  */
 public class InvestmentChoiceAction extends org.apache.struts.action.Action {
 
-    /* forward name="success" path="" */
     private static final String SUCCESS = "success";
     private final static String FAILURE = "failure";
 
-    /**
-     * This is the action called from the Struts framework.
-     *
-     * @param mapping The ActionMapping used to select this instance.
-     * @param form The optional ActionForm bean for this request.
-     * @param request The HTTP Request we are processing.
-     * @param response The HTTP Response we are processing.
-     * @throws java.lang.Exception
-     * @return
-     */
     @Override
     public ActionForward execute(ActionMapping mapping, ActionForm form,
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
 
         InvestmentChoiceForm formBean = (InvestmentChoiceForm) form;
+        
         String clientPersonalData = formBean.getClientNameAndSurname();
         String investmentName = formBean.getInvestmentName();
         String periodChoice = formBean.getPeriodChoice();
         String price = formBean.getPrice();
 
-        // perform validation
-        if (clientPersonalData == null || clientPersonalData.indexOf(" ") == -1 || price.equals("")) {
-            formBean.setError();
+        if (clientPersonalData != null && (clientPersonalData.equals("") || clientPersonalData.indexOf(" ") == -1 )) {
+            formBean.setError("Proszę podać imię oraz nazwisko (powinny być oddzielone spacją)");
             return mapping.findForward(FAILURE);
         }
+        if (investmentName != null && investmentName.equals("")) {
+            formBean.setError("Proszę określić lokatę");
+            return mapping.findForward(FAILURE);
+        }
+        if (periodChoice != null && periodChoice.equals("")) {
+            formBean.setError("Proszę określić czas");
+            return mapping.findForward(FAILURE);
+        }
+        
+        if(price != null) {
+            Pattern pattern = Pattern.compile("\\d+.\\d{2}$");
+            Matcher matcher = pattern.matcher(price);
 
+            if (!matcher.matches()) {
+                formBean.setError("Proszę podać kwotę z dwoma miejscami po kropce, np. 100.00");
+                return mapping.findForward(FAILURE);
+            }
+        }
         return mapping.findForward(SUCCESS);
     }
 }
