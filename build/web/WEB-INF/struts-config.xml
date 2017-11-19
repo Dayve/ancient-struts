@@ -21,7 +21,7 @@
     <action-mappings>
         <action name="InvestmentChoiceForm" path="/login" scope="request" type="com.myapp.struts.InvestmentChoiceAction" validate="false">
             <forward name="success" path="/success.jsp" />
-            <forward name="failure" path="/login.jsp" />
+            <forward name="failure" path="/investmentForm.jsp" />
         </action>
         <action path="/Welcome" forward="/welcomeStruts.jsp"/>
     </action-mappings>
