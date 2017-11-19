@@ -11,19 +11,13 @@
     </form-beans>
     
     <global-exceptions>
-    
     </global-exceptions>
-
-    <global-forwards>
-        <forward name="welcome"  path="/Welcome.do"/>
-    </global-forwards>
 
     <action-mappings>
         <action name="InvestmentChoiceForm" path="/login" scope="request" type="com.myapp.struts.InvestmentChoiceAction" validate="false">
             <forward name="success" path="/success.jsp" />
             <forward name="failure" path="/investmentForm.jsp" />
         </action>
-        <action path="/Welcome" forward="/welcomeStruts.jsp"/>
     </action-mappings>
     
     <controller processorClass="org.apache.struts.tiles.TilesRequestProcessor"/>
