@@ -1,3 +1,6 @@
 # Ignore all jars:
 *.jar
 
+# And java bytecode:
+*.class
+
