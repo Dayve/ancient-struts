@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<investments>
+    <investment>
+        <name>Dla nowych klientów</name>
+        <periods>
+            <period>na kwartał</period>
+            <period>na pół roku</period>
+            <period>ośmiomiesięczna</period>
+            <period>dwulenia</period>
+            <period>trzyletnia</period>
+            <period>na 5 lat</period>
+        </periods>
+    </investment>
+    <investment>
+        <name>Otwierana internetowo</name>
+        <periods>
+            <period>na pół roku</period>
+            <period>ośmiomiesięczna</period>
+            <period>roczna</period>
+            <period>piętnastomiesięczna</period>
+            <period>dwuipółletnia</period>
+            <period>na 4 lata</period>
+        </periods>
+    </investment>
+    <investment>
+        <name>Lokata tradycyjna</name>
+        <periods>
+            <period>na pół roku</period>
+            <period>ośmiomiesięczna</period>
+            <period>roczna</period>
+            <period>piętnastomiesięczna</period>
+            <period>dwuipółletnia</period>
+            <period>na kwartał</period>
+            <period>na 6 lat</period>
+        </periods>
+    </investment>
+</investments>

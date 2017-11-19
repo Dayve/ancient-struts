@@ -76,7 +76,7 @@ public class InvestmentChoiceForm extends org.apache.struts.action.ActionForm {
         ActionErrors errors = new ActionErrors();
 
         if (getClientNameAndSurname() == null || getPrice().length() < 1) {
-            errors.add("name", new ActionMessage("error.name.required"));
+            //errors.add("clientNameAndSurname", new ActionMessage("error.name.required"));
         }
         return errors;
     }

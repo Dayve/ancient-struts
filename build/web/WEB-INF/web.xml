@@ -21,6 +21,16 @@
         <servlet-name>action</servlet-name>
         <url-pattern>*.do</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>InvestmentsServlet</servlet-name>
+        <servlet-class>InvestmentsServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>InvestmentsServlet</servlet-name>
+        <url-pattern>/InvestmentsServlet</url-pattern>
+    </servlet-mapping>
+    
     <session-config>
         <session-timeout>
             30
