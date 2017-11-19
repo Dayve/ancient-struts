@@ -12,40 +12,39 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Lokaty</title>
     </head>
     <body>
         <html:form action="/investment">
-            <table border="0">
-                <tbody>
-                    <tr>
-                        <td colspan="2">
-                            <bean:write name="InvestmentChoiceForm" property="error" filter="false"/>
-                            &nbsp;</td>
-                    </tr>
-                    <tr>
-                        <td>Twoje imię i nazwisko:</td>
-                        <td><html:text property="clientNameAndSurname" /></td>
-                    </tr>
-                    <tr>
-                        <td>Nazwa lokaty:</td>
-                        <td><html:text property="investmentName" /></td>
-                    </tr>
-                    <tr>
-                        <td>Okres lokaty:</td>
-                        <td><html:text property="periodChoice" /></td>
-                    </tr>
-                    <tr>
-                        <td>Kwota:</td>
-                        <td><html:text property="price" /></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><html:submit value="Prześlij" /></td>
-                    </tr>
-                </tbody>
-            </table>
+            <bean:write name="InvestmentChoiceForm" property="error" filter="false"/>&nbsp;
+            <div>
+                <label for="name-input">Imię, nazwisko:</label>
+                <html:text property="clientNameAndSurname" styleClass="right-side" styleId="name-input" />
+            </div>
+            <br/>
+
+            <div>
+                <label for="investment-name-input">Nazwa lokaty:</label> 
+                <html:text property="investmentName" styleClass="right-side" styleId="investment-name-input" />
+                <div class="suggestions-div" id="name-suggestions"></div>
+            </div>
+            <br/>
+
+            <div>
+                <label for="investment-time-input">Czas lokaty:</label>
+                <html:text property="periodChoice"  styleClass="right-side" styleId="investment-time-input" />
+                <div class="suggestions-div" id="period-suggestions"></div>
+            </div>
+            <br/>
+
+            <div>
+                <label for="priceInput">Wpłata:</label> 
+                <html:text property="price" styleClass="right-side" styleId="priceInput" />
+            </div>
+            <br/>
+
+            <html:submit value="Prześlij" styleClass="right-side" styleId="send-button" />
         </html:form>
     </body>
 </html>
