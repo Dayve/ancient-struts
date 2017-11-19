@@ -18,7 +18,7 @@ import org.apache.struts.action.ActionMessage;
  *
  * @author dayve
  */
-public class LoginForm extends org.apache.struts.action.ActionForm {
+public class InvestmentChoiceForm extends org.apache.struts.action.ActionForm {
 
     private String name;
     private String email;
@@ -57,7 +57,7 @@ public class LoginForm extends org.apache.struts.action.ActionForm {
     /**
      *
      */
-    public LoginForm() {
+    public InvestmentChoiceForm() {
         super();
         // TODO Auto-generated constructor stub
     }

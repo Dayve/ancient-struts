@@ -21,7 +21,7 @@
                 <tbody>
                     <tr>
                         <td colspan="2">
-                            <bean:write name="LoginForm" property="error" filter="false"/>
+                            <bean:write name="InvestmentChoiceForm" property="error" filter="false"/>
                             &nbsp;</td>
                     </tr>
                     <tr>

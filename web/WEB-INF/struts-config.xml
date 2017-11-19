@@ -7,7 +7,7 @@
 
 <struts-config>
     <form-beans>
-        <form-bean name="LoginForm" type="com.myapp.struts.LoginForm"/>
+        <form-bean name="InvestmentChoiceForm" type="com.myapp.struts.InvestmentChoiceForm"/>
     </form-beans>
     
     <global-exceptions>
@@ -19,7 +19,7 @@
     </global-forwards>
 
     <action-mappings>
-        <action name="LoginForm" path="/login" scope="request" type="com.myapp.struts.InvestmentChoiceAction" validate="false">
+        <action name="InvestmentChoiceForm" path="/login" scope="request" type="com.myapp.struts.InvestmentChoiceAction" validate="false">
             <forward name="success" path="/success.jsp" />
             <forward name="failure" path="/login.jsp" />
         </action>

@@ -37,7 +37,7 @@ public class InvestmentChoiceAction extends org.apache.struts.action.Action {
             throws Exception {
 
         // extract user data
-        LoginForm formBean = (LoginForm) form;
+        InvestmentChoiceForm formBean = (InvestmentChoiceForm) form;
         String name = formBean.getName();
         String email = formBean.getEmail();
 
