@@ -20,61 +20,63 @@ import org.apache.struts.action.ActionMessage;
  */
 public class InvestmentChoiceForm extends org.apache.struts.action.ActionForm {
 
-    private String name;
-    private String email;
+    private String clientNameAndSurname;
+    private String investmentName;
+    private String periodChoice;
+    private String price;
 
-    // error message
+    public String getClientNameAndSurname() {
+        return clientNameAndSurname;
+    }
+
+    public void setClientNameAndSurname(String clientNameAndSurname) {
+        this.clientNameAndSurname = clientNameAndSurname;
+    }
+
+    public String getInvestmentName() {
+        return investmentName;
+    }
+
+    public void setInvestmentName(String investmentName) {
+        this.investmentName = investmentName;
+    }
+
+    public String getPeriodChoice() {
+        return periodChoice;
+    }
+
+    public void setPeriodChoice(String periodChoice) {
+        this.periodChoice = periodChoice;
+    }
+
+    public String getPrice() {
+        return price;
+    }
+
+    public void setPrice(String price) {
+        this.price = price;
+    }
+
     private String error;
+
+    public void setError() {
+        this.error = "<span style='color:red'>Dane niepoprawne</span>";
+    }
 
     public String getError() {
         return error;
     }
 
-    public void setError(String error) {
-        this.error = error;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public void setError() {
-        this.error = "<span style='color:red'>Please provide valid entries for both fields</span>";
-    }
-
-    /**
-     *
-     */
     public InvestmentChoiceForm() {
         super();
-        // TODO Auto-generated constructor stub
     }
 
-    /**
-     * This is the action called from the Struts framework.
-     *
-     * @param mapping The ActionMapping used to select this instance.
-     * @param request The HTTP Request we are processing.
-     * @return
-     */
+    @Override
     public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
         ActionErrors errors = new ActionErrors();
 
-        if (getName() == null || getName().length() < 1) {
+        if (getClientNameAndSurname() == null || getPrice().length() < 1) {
             errors.add("name", new ActionMessage("error.name.required"));
-            // TODO: add 'error.name.required' key to your resources
         }
         return errors;
     }

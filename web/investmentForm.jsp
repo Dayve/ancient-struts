@@ -13,7 +13,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
-        <title>JSP Page</title>
+        <title>Lokaty</title>
     </head>
     <body>
         <html:form action="/investment">
@@ -25,16 +25,24 @@
                             &nbsp;</td>
                     </tr>
                     <tr>
-                        <td>Enter your name:</td>
-                        <td><html:text property="name" /></td>
+                        <td>Twoje imię i nazwisko:</td>
+                        <td><html:text property="clientNameAndSurname" /></td>
                     </tr>
                     <tr>
-                        <td>Enter your email:</td>
-                        <td><html:text property="email" /></td>
+                        <td>Nazwa lokaty:</td>
+                        <td><html:text property="investmentName" /></td>
+                    </tr>
+                    <tr>
+                        <td>Okres lokaty:</td>
+                        <td><html:text property="periodChoice" /></td>
+                    </tr>
+                    <tr>
+                        <td>Kwota:</td>
+                        <td><html:text property="price" /></td>
                     </tr>
                     <tr>
                         <td></td>
-                        <td><html:submit value="Login" /></td>
+                        <td><html:submit value="Prześlij" /></td>
                     </tr>
                 </tbody>
             </table>

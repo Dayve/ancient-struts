@@ -36,20 +36,14 @@ public class InvestmentChoiceAction extends org.apache.struts.action.Action {
             HttpServletRequest request, HttpServletResponse response)
             throws Exception {
 
-        // extract user data
         InvestmentChoiceForm formBean = (InvestmentChoiceForm) form;
-        String name = formBean.getName();
-        String email = formBean.getEmail();
+        String clientPersonalData = formBean.getClientNameAndSurname();
+        String investmentName = formBean.getInvestmentName();
+        String periodChoice = formBean.getPeriodChoice();
+        String price = formBean.getPrice();
 
         // perform validation
-        if ((name == null)
-                || // name parameter does not exist
-                email == null
-                || // email parameter does not exist
-                name.equals("")
-                || // name parameter is empty
-                email.indexOf("@") == -1) {   // email lacks '@'
-
+        if (clientPersonalData == null || clientPersonalData.indexOf(" ") == -1 || price.equals("")) {
             formBean.setError();
             return mapping.findForward(FAILURE);
         }

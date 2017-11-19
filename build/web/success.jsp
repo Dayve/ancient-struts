@@ -11,15 +11,15 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css" href="stylesheet.css">
-        <title>Login Success</title>
+        <title>Potwierdzenie</title>
     </head>
     <body>
-        <h1>Congratulations!</h1>
-
-        <p>You have successfully logged in.</p>
-
-        <p>Your name is: <bean:write name="InvestmentChoiceForm" property="name" />.</p>
-
-        <p>Your email address is: <bean:write name="InvestmentChoiceForm" property="email" />.</p>
+        <h1>Dziękujemy!</h1>
+        <p>Przesłano dane dotyczące lokaty</p>
+        
+        <p>Dane klienta: <bean:write name="InvestmentChoiceForm" property="clientNameAndSurname" />.</p>
+        <p>Wybrana lokata: <bean:write name="InvestmentChoiceForm" property="investmentName" />.</p>
+        <p>Wybrany okres lokaty: <bean:write name="InvestmentChoiceForm" property="periodChoice" />.</p>
+        <p>Deklarowana kwota: <bean:write name="InvestmentChoiceForm" property="price" />.</p>
     </body>
 </html>
