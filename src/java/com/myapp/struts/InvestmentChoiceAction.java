@@ -15,7 +15,7 @@ import org.apache.struts.action.ActionMapping;
  *
  * @author dayve
  */
-public class LoginAction extends org.apache.struts.action.Action {
+public class InvestmentChoiceAction extends org.apache.struts.action.Action {
 
     /* forward name="success" path="" */
     private static final String SUCCESS = "success";
